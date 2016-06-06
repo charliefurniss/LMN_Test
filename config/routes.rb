@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'emails/index'
+  
+  resources :emails , only: [:index]
+
+  root 'emails#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
