@@ -1,4 +1,5 @@
 class EmailsController < ApplicationController
+  
   def index
 
   	@emails = Email.all
@@ -17,33 +18,39 @@ class EmailsController < ApplicationController
 
   		end
 
+  		email_type_array = email_type_array.uniq
+
   		return email_type_array
 
   	end
 
   	def calc_click_rate()
 
-  		click_rate_array = []
+  		click_rates_array = []
 
   		email_type_array = create_email_type_array()
 
   		email_type_array.each do |email_type|
 
-  			email = @emails.where(:EmailType => email_type)
+  			hash = {}
 
-  			puts email
+  			email = @emails.where(:EmailType => email_type)
 
   			click_rate = (email.where(:Event => "click").count * 100)
 
-  			click_rate_array.push(click_rate)
+  			hash["email_type"] = email_type
+
+  			hash["click_rate"] = click_rate
+
+  			click_rates_array.push(hash)
 
   		end
 
-  		puts click_rate_array
+  		return click_rates_array
 
   	end
 
-  	calc_click_rate()
+  	@click_rates_array = calc_click_rate()
 
   end
 end

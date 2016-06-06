@@ -9,3 +9,9 @@
 <!-- <h3>UserConfirmation click rate: <%= @user_confirmation_click_rate %>% </h3>
  -->
 
+<% @click_rates_array.each do |click_rate_hash| %>
+
+	<h3><%= click_rate_hash['email_type'] %> click rate: <%= click_rate_hash['click_rate'] %>%</h3>
+
+<% end %>
+
