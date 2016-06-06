@@ -1,5 +1,13 @@
 <h1>Emails#index</h1>
 
+<h3>Total number of emails: <%= @emails.count %> </h3>
+
+<h3>Total number of emails open: <%= @emails_opened %> </h3>
+
+<h3>Total number of clicks: <%= @emails_clicked %> </h3>
+
+<h3>UserConfirmation click rate: <%= @user_confirmation_click_rate %>% </h3>
+
 <% @emails.each do |email| %>
 
 	<p> <%= email.Address %> </p>
