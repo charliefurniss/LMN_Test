@@ -44,11 +44,11 @@ class EmailsController < ApplicationController
 
   			puts click_count
 
-  			click_rate = click_count.to_d/email_type_total.to_d * 100
+  			click_rate = click_count.to_f/email_type_total.to_f * 100
 
   			hash["email_type"] = email_type
 
-  			hash["click_rate"] = click_rate.round(2)
+  			hash["click_rate"] = '%.2f' % click_rate
 
   			click_rates_array.push(hash)
 
