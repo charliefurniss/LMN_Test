@@ -5,8 +5,6 @@ class CreateEmails < ActiveRecord::Migration
       t.text :EmailType
       t.text :Event
       t.timestamps :Timestamp
-
-      t.timestamps null: false
     end
   end
 end
