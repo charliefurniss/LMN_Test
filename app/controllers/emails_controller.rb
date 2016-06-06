@@ -61,4 +61,8 @@ class EmailsController < ApplicationController
   	@click_rates_array = calc_click_rate()
 
   end
+
+  response = HTTParty.get 'http://jsonplaceholder.typicode.com/posts/1'
+  puts response
+
 end
