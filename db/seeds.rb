@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-e1 = Email.create!("Address":"barney@lostmy.name","EmailType":"Shipment","Event":"send","Timestamp":1432820696)
+e1 = Email.create!("Address":"barney@lostmy.name","EmailType":"Shipment","Event":"send","Timestamp": 1432820696)
 
-e2 = Email.create!("Address":"tom@lostmy.name","EmailType":"UserConfirmation","Event":"click","Timestamp":1432820702)
+e2 = Email.create!("Address":"tom@lostmy.name","EmailType":"UserConfirmation","Event":"click","Timestamp": 1432820702)
 
-e3 = Email.create!("Address":"vitor@lostmy.name","EmailType":"Shipment","Event":"open","Timestamp":1432820704)
+e3 = Email.create!("Address":"vitor@lostmy.name","EmailType":"Shipment","Event":"open","Timestamp": 1432820704)

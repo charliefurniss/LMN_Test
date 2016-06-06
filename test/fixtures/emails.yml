@@ -4,10 +4,10 @@ one:
   Address: MyText
   EmailType: MyText
   Event: MyText
-  Timestamp: 
+  Timestamp: 1
 
 two:
   Address: MyText
   EmailType: MyText
   Event: MyText
-  Timestamp: 
+  Timestamp: 1
