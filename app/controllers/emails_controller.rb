@@ -24,7 +24,7 @@ class EmailsController < ApplicationController
 
   	end
 
-  	def calc_click_rate()
+  	def calc_click_rate
 
   		click_rates_array = []
 
@@ -36,11 +36,19 @@ class EmailsController < ApplicationController
 
   			email = @emails.where(:EmailType => email_type)
 
-  			click_rate = (email.where(:Event => "click").count * 100)
+  			email_type_total = email.count
+
+  			puts email_type_total
+
+  			click_count = (email.where(:Event => "click")).count
+
+  			puts click_count
+
+  			click_rate = click_count.to_d/email_type_total.to_d * 100
 
   			hash["email_type"] = email_type
 
-  			hash["click_rate"] = click_rate
+  			hash["click_rate"] = click_rate.round(2)
 
   			click_rates_array.push(hash)
 
