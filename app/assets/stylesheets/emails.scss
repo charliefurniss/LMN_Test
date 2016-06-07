@@ -2,6 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+#header {
+	background-color: #363446;
+	margin-bottom: 40px;
+	padding: 20px;
+}
+
+#header, .data_container {
+	text-align: center;
+}
+
 .data_container {
 	background-color: orange;
+	margin-bottom: 20px;
+}
+
+.data {
+	padding: 30px;
 }
