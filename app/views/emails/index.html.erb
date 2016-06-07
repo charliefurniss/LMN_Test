@@ -4,40 +4,44 @@
 	</div>
 </div>
 
-<div class="row">
-	<div class="data_container small-12 columns">
-		<div class="data">
-			<h4>Total emails:</h4>
-			<h1><%= @emails.count %></h1>
-		</div>
-	</div>
-</div>
+<div id="content_container">
 
-<div class="row">
-	<div class="data_container medium-5 offset-1 small-12 columns">
-		<div class="data">
-			<h4>Emails opened</h4>
-			<h1><%= @emails_opened %></h1>
-		</div>
-	</div>
-
-	<div class="data_container medium-5 offset-1 small-12 columns">
-		<div class="data">
-			<h4>No. of clicks</h4>
-			<h1><%= @emails_clicked %></h1>
-		</div>
-	</div>
-</div>	
-
-<div class="row">
-	<% @click_rates_array.each do |click_rate_hash| %>
-		<div class="data_container medium-5 offset-1 small-12 columns">
+	<div class="row">
+		<div class="data_container small-12 columns">
 			<div class="data">
-				<h4><%= click_rate_hash['email_type'] %><br> click rate</h4>
-				<h1><%= click_rate_hash['click_rate'] %>%</h1>
+				<h4>Total emails</h4>
+				<h1><%= @emails.count %></h1>
 			</div>
 		</div>
-	<% end %>
+	</div>
+
+	<div class="row">
+		<div class="data_container medium-5 offset-1 small-12 columns">
+			<div class="data">
+				<h4>Emails opened</h4>
+				<h1><%= @emails_opened %></h1>
+			</div>
+		</div>
+
+		<div class="data_container medium-5 offset-1 small-12 columns">
+			<div class="data">
+				<h4>No. of clicks</h4>
+				<h1><%= @emails_clicked %></h1>
+			</div>
+		</div>
+	</div>	
+
+	<div class="row">
+		<% @click_rates_array.each do |click_rate_hash| %>
+			<div class="data_container medium-5 offset-1 small-12 columns">
+				<div class="data">
+					<h4><%= click_rate_hash['email_type'] %><br> click rate</h4>
+					<h1><%= click_rate_hash['click_rate'] %>%</h1>
+				</div>
+			</div>
+		<% end %>
+	</div>
+
 </div>
 
 

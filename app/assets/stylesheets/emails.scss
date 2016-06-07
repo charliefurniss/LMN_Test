@@ -5,9 +5,13 @@
 
 
 #header {
-	background-color: #363446;
-	margin-bottom: 40px;
+	background-color: #565D73;
 	padding: 20px;
+}
+
+#content_container {
+	padding-top: 40px;
+	background-color: #22252F;
 }
 
 #header, .data_container {
@@ -15,7 +19,7 @@
 }
 
 .data_container {
-	background-color: orange;
+	background-color: #363446;
 	margin-bottom: 20px;
 }
 
